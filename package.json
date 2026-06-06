@@ -1,0 +1,13 @@
+{
+  "name": "wyd-automation-platform",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n BACKEND,DESKTOP -c cyan,magenta \"npm run dev --prefix backend\" \"npm run dev --prefix desktop\"",
+    "install:all": "npm install --prefix backend && npm install --prefix desktop",
+    "db:push": "npm run db:push --prefix backend",
+    "db:seed": "npm run db:seed --prefix backend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
